@@ -1,9 +1,10 @@
+package Utility;
+
 import java.util.Scanner;
 public class Weather {
 public static double windchill(double t, // Temperature
                                double v) { // velocity in MPH
     return 35.75 + 0.6215*t + (0.4275*t -35.75)*Math.pow(v, 0.16);
-
 }
 public static void main(String [] args){
 
@@ -20,6 +21,8 @@ public static void main(String [] args){
 
 
 
-    System.out.printf("Windchill is %.2f\n", + windchill(temp,velocity));
+    System.out.printf("Windchill for %.1f degrees at %.1f MPH is %.2f\n",
+            temp, velocity, windchill(temp,velocity));
+    System.out.println("They said \"don't do it\".");
 }
 }
