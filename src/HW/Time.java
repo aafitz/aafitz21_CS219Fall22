@@ -1,4 +1,4 @@
-package HW1;
+package HW;
 
 public class Time {
     public static void main(String[] args) {
