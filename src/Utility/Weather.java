@@ -13,6 +13,12 @@ public static void main(String [] args){
 
     System.out.print("Enter temperature in degrees F: ");
 
+    if (kbd.hasNextDouble()) {
+        double temp = kbd.nextDouble();
+    }
+    else {
+        System.out.println("Error: please enter a decimal number. You entered %f", kbd.next())
+    }
     double temp = kbd.nextDouble();
 
     System.out.print("Enter a wind velocity in MPH: ");
