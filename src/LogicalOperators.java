@@ -1,14 +1,13 @@
 public class LogicalOperators {
-
     public static void main(String []args) {
 
         Random r = new Random();
 
 
         int coinflip = r.nextInt(2);
-        if (coinflip == 0);
-            System.out.println("Heads"); {
-            else
+        if (coinflip == 0) {
+        System.out.println("Heads"); }
+            else {
             System.out.println("Tails");
         }
 
@@ -42,7 +41,7 @@ public class LogicalOperators {
 
             // check to see if we have exactly one, 1
        if ((die1 == 1 || die2 == 1) && (die1 != die2));
-        System.out.println()
+            System.out.println();
 
         }
     }

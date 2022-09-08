@@ -17,8 +17,12 @@ public static void main(String [] args){
         double temp = kbd.nextDouble();
     }
     else {
-        System.out.println("Error: please enter a decimal number. You entered %f", kbd.next())
+        System.out.printf("Error: please enter a decimal number. You entered %s",
+                kbd.next());
+    return; // exit main
     }
+
+
     double temp = kbd.nextDouble();
 
     System.out.print("Enter a wind velocity in MPH: ");
@@ -29,6 +33,6 @@ public static void main(String [] args){
 
     System.out.printf("Windchill for %.1f degrees at %.1f MPH is %.2f\n",
             temp, velocity, windchill(temp,velocity));
-    System.out.println("They said \"don't do it\".");
+    //System.out.println("They said \"don't do it\".");
 }
 }
