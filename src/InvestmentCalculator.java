@@ -22,7 +22,7 @@ public class InvestmentCalculator {
 
         // call the function with the inputted values
 
-        System.out.printf("Your investment💰💰💸💲🤑 is worth %.2f ",
+        System.out.printf("Your investment is worth %.2f ",
                 Investment.investment(c,r,t,n));
 
 
