@@ -1,4 +1,4 @@
-package logicExercises.Logic;
+package LoopExercises;
 
 //public class cigar {
       //  public static void main(String [] args) {
