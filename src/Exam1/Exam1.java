@@ -1,8 +1,8 @@
 package Exam1;
 import java.util.Scanner; // imports scanner
 
-public class Exam1 {
-
+// public class Exam1 {
+/*
     public static int getNumbers(Scanner kbd) {
         c = 0; // count variable
         int n = getNumbers(kbd);
@@ -61,3 +61,5 @@ n.charAt() == b;
 
     }
 }
+*/
+
