@@ -1,5 +1,5 @@
  package HW5;
-
+/*
 public class Exercise66 {
     public static boolean canSpell(String word, String tiles) {
         boolean canSpellNow = false;
@@ -31,3 +31,4 @@ public class Exercise66 {
         }
     }
 }
+ */
