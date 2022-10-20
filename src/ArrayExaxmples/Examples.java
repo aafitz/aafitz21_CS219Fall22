@@ -64,6 +64,27 @@ public class Examples{
 
         return sum;
     }
+
+    public static void reverse(int [] arr){ // reverse the values in the array
+
+        for (int i = 0; i < arr.length/2; i++){
+            int temp = arr[i];
+            arr[i] = arr[arr.length -1 -i];
+            arr[arr.length -1 -i] = temp;
+        }
+    }
+
+    public static int max(final int []arr){ // return the value of the largest element in the array
+        int curr_max = arr[0]; // or could put "int curr_max = Integer.MIN_VALUE;
+
+
+        for(int i = 1; i < arr.length; i++){ //if do this then  change to; int i = 0
+            if (arr[i] > curr_max){
+                curr_max = arr[i];
+            }
+        }
+        return curr_max;
+    }
     //write a function that returns the average of an array of integers
     public static double avg(int [] arr){
         return (double) sum(arr) / arr.length;
@@ -78,13 +99,36 @@ public class Examples{
             return arr[arr.length / 2] + arr[arr.length/2 - 1] / 2.0;
         // avg of numbers at index 4 and 5
         else
-          return arr[arr.length / 2];
+          return arr[arr.length / 2 +1];
         //if odd then need to take the middle number
+    }
+    public static int indexOf(final String [] arr, String item){ // return the index of the item in the arr, if not found: -1
+        // fill in code here
+    for(int i = 0; i < arr.length; i++)
+       //if( arr[i].equals(item));
+        if(arr[i] == item)
+           return i;
+    return -1;
+
+
     }
 
 // for loop generates values
     public static void main(String [] args){
-        int [] nums = {4, 1, 0, 9, 2, 8};
+        String [] names = {"Harry", "Hermione", "Ron", "Draco"};
+        System.out.println(indexOf(names, "Ron")== 2);
+        System.out.println(indexOf(names, "Dumbledore")== -1);
+
+
+        int [] nums = {4, 1, 0, 9, 2,8}; // short hand for the mess below:
+        int [] nums2 = new int [] {1,2,3,4,5};
+
+
+        reverse(nums);
+        System.out.println(Arrays.equals(nums,new int []{8,2,9,0,1,4}));
+        System.out.println(max(nums)==9);
+
+
         int [] grades = new int[10]; /// allocate the space for 10 grades
 
 

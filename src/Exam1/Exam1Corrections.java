@@ -1,4 +1,5 @@
 package Exam1;
+
 import java.util.Scanner;
 
 public class Exam1Corrections {
@@ -16,29 +17,32 @@ public class Exam1Corrections {
     }
 
     public static int ValidateInput() {
-        int n;
+        boolean valid = false;
+        int n = 0;
         Scanner kbd = new Scanner(System.in);
-        while (true) {
-            System.out.print("Please enter an integer: ");
+        while (!valid) {
+            System.out.println("Please enter an integer: ");
             if (kbd.hasNextInt()) {
                 n = kbd.nextInt();
-                else {
-                    break;
+                if (n < 0) {
+                    System.out.println("Error:Make sure to enter an integer, you entered " + n);
+                } else {
+                    valid = true;
                 }
-            }
-            else if (kbd.hasNextDouble()) {
-                System.out.printf("Make sure to enter an integer, you entered %f\n ", kbd.nextDouble());
             } else {
-                System.out.printf("Make sure to enter an integer, you entered %s\n ", kbd.next());
+                String input = kbd.next();
+                System.out.println("Error: must be an integer, you entered " + input);
             }
+
+
+
+
         }
         return n;
+    }
+        public static void main(String[] args) {
+            int n = ValidateInput();
 
-}
-
-    public static void main(String[] args) {
-        int n = ValidateInput();
-
-        System.out.print(numberOfDigits(n));
-}}
-
+            System.out.print(numberOfDigits(n));
+        }
+    }
