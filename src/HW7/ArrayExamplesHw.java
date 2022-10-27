@@ -112,7 +112,7 @@ public class ArrayExamplesHw {
         System.out.println(hasAdjacent(fruit));
         System.out.println(hasDuplicate(names));
         System.out.println(hasDuplicate(fruit));
-        System.out.println(!hasDuplicate(new String []{"baseball", "hockey", "soccer"}));
+        System.out.println(!hasDuplicate(new String []{"baseball", "hockey", "soccer", "football"}));
 
         int [] values = {2,7,11,15};
         System.out.println(goofy(values, 9));
