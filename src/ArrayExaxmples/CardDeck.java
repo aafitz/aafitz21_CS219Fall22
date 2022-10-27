@@ -1,10 +1,26 @@
 package ArrayExaxmples;
-
+/*
 import java.util.Arrays;
-
+import java.util.Random;
 public class CardDeck {
 
-    public static String [] builddeck(){
+
+    public static String [] shuffle(String [] aos){
+        Random rng = new Random();
+
+        for(int i = 0; i < aos.length - 1; i++){
+            int r = rng.nextInt(i, aos.length -1);
+            String temp = aos[i];
+            aos[i] = aos[r];
+            aos[r] = temp;
+        }
+        return aos;
+
+    }
+
+
+/*
+    public static String [] buildDeck(){
         String [] suits = {"\u2260", "\u2665", "\u2666", "\u2663"};
         String [] ranks = {"2", "3", "4", "5", "6", "7", "8", "9", "10",
                 "Jack","Queen","King", "Ace"};
@@ -20,7 +36,14 @@ public class CardDeck {
         return deck;
 
         }
-
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(builddeck()));
+        String [] deck = buildDeck; //declares a variable of strings
+        System.out.println(Arrays.toString(deck));
+        //Shuffle(deck);
+        System.out.println(Arrays.toString(shuffle(deck)));
     }}
+
+
+
+
+*/
