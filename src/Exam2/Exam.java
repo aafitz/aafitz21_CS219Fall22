@@ -20,6 +20,7 @@ public class Exam {
             throw new RuntimeException(e);
         }
 
+
         // create an array of strings
         String [] words = new String[n];
         int i = 0;
@@ -29,6 +30,7 @@ public class Exam {
 
         return words;
     }
+
 
 
     // need to save the palindrome words into a new array
