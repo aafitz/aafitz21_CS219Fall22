@@ -25,6 +25,9 @@ public class Exam {
         String [] words = new String[n];
         int i = 0;
         while (s.hasNextLine()) {
+            // only put word in array if palindrome
+            //only call nextline once
+            //put result in temp string variable 
             words[i++] = s.nextLine();
         }
 
@@ -55,11 +58,10 @@ public class Exam {
 
 
     public static void main(String [] args) {
-        System.out.println(reverse("anna"));
-        System.out.println(reverse("racecar"));
-        System.out.println(isPalindrome2("racecar"));
-        System.out.println(isPalindrome2("anna"));
-        System.out.println(isPalindrome2("bat"));
+      // call the array of palindromes and then write the words in the array in reverse
+        // 1st- making an array w palindromes
+        // 2nd- printing it to check
+        //3rd write them backwards and print
 
     }
 }

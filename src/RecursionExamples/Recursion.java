@@ -17,7 +17,7 @@ public class Recursion {
 
     // count7s(7132771) == 3
     // return the number of 7s in the integer n
-    public static int count7s(int n) {
+    public static int count7s(int n) { // if the statement matches the function name then you know its the recursive case/call
         if (n == 0)
             return 0;
         else if (n % 10 == 7)

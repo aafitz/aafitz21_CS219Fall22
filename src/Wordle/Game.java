@@ -28,7 +28,6 @@ public class Game {
         while (s.hasNextLine()) {
             words[i++] = s.nextLine();
         }
-
         return words;
     }
 
