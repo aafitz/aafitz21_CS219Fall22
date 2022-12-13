@@ -38,11 +38,11 @@ public class DataBase {
         // read zipcode file line by line
         while (s.hasNextLine()) {
             String line = s.nextLine();
-            String [] parts = line.split(",");
+            String[] parts = line.split(",");
             Zipcode z = new Zipcode(
-                    parts[1].substring(1,parts[1].length() - 1),
-                    parts[2].substring(1,parts[2].length() - 1),
-                    parts[3].substring(1,parts[3].length() - 1),
+                    parts[1].substring(1, parts[1].length() - 1),
+                    parts[2].substring(1, parts[2].length() - 1),
+                    parts[3].substring(1, parts[3].length() - 1),
                     Double.parseDouble(parts[4]),
                     Double.parseDouble(parts[5]),
                     Integer.parseInt(parts[6])
@@ -68,49 +68,60 @@ public class DataBase {
         return null;
     }
 
-    /*
-     *   Rfeturn the zipcode info of the northern most latitude.
-     */
-    public Zipcode max_latitude() {
-        return null;
-    }
-
-    public Zipcode findByZip1(String code) {
-
-        for (int i = 0; i < this.codes.size(); i++) {
-            if (code.equals(this.codes.get(i).getCode())) {
-                return this.codes.get(i);
-            }
+    public static void getNorthern(latitude) { // need to find the max latitude and then find the zipcode to it that matches and print it
+        if (latitude.equals(max_latitude())) {
+            return Zipode;
         }
-        return null;
-    }
 
-    private Zipcode bsearch(String target, int low, int high) {
-
-        if (low > high)
+        public Zipcode max_latitude () {
             return null;
+        }
 
-        int mid = (low + high) / 2;
+        public Zipcode findByZip1 (String code){
 
-        if (this.codes.get(mid).getCode().equals(target))
-            return this.codes.get(mid);
-        else if (this.codes.get(mid).getCode().compareTo(target) < 0)
-            return bsearch(target, mid+1, high);
-        else
-            return bsearch(target, low, mid - 1);
-    }
-
-    // Provides a simpler intefrace to the bsearch function
-    public Zipcode search(String code) {
-        // return bsearch(code, 0, codes.size() - 1);
-        int pos = Collections.binarySearch(this.codes,
-                new Zipcode(code, "","",0,0,0));
-
-        if (pos != -1)
-            return this.codes.get(pos);
-        else
+            for (int i = 0; i < this.codes.size(); i++) {
+                if (code.equals(this.codes.get(i).getCode())) {
+                    return this.codes.get(i);
+                }
+            }
             return null;
+        }
+
+        private Zipcode bsearch (String target,int low, int high){
+
+            if (low > high)
+                return null;
+
+            int mid = (low + high) / 2;
+
+            if (this.codes.get(mid).getCode().equals(target))
+                return this.codes.get(mid);
+            else if (this.codes.get(mid).getCode().compareTo(target) < 0)
+                return bsearch(target, mid + 1, high);
+            else
+                return bsearch(target, low, mid - 1);
+        }
+
+        // Provides a simpler intefrace to the bsearch function
+        public Zipcode search (String code){
+            // return bsearch(code, 0, codes.size() - 1);
+            int pos = Collections.binarySearch(this.codes,
+                    new Zipcode(code, "", "", 0, 0, 0));
+
+            if (pos != -1)
+                return this.codes.get(pos);
+            else
+                return null;
+        }
+        public largeLatZip searchit (Double Lat){
+            int pos1 = Collections.binarySearch(this.latitude,
+                    new Latitude("","","",0, max_latitude, 0));
+            if(pos1 > 0)
+                return this.latitude.get(pos1);
+            else
+                return null;
+
+        }
     }
-
-
 }
+

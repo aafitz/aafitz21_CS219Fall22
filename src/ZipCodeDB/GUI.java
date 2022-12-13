@@ -8,6 +8,11 @@ public class GUI {
         frame.add(new GUIPanel());
         frame.setVisible(true);
 
+        JFrame frame2 = new JFrame("NorthernMost");
+        frame2.add(new GUIPanel());
+        frame2.setVisible(true);
+        //frame2.add(max_latitude);
+
         // When the user clicks the X in the title bar. Then also
         // stop running the main program
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);

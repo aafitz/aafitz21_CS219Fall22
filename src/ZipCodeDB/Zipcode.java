@@ -83,7 +83,31 @@ public class Zipcode implements Comparable<Zipcode>, Distance, WeatherInfo {
             }
 
             }
+        while(s.hasNextLine()) {
+            String line = s.nextLine();
+            if(line.indexOf("speed")>0) {
+                speed = Double.parseDouble(
+                        line.substring(line.indexOf(':') + 1,
+                                line.indexOf(',')));
 
+            }
+
+            }
+        while(s.hasNextLine()){
+            String line = s.nextLine();
+            if(line.indexOf("temp")>0){
+                temp = Double.parseDouble(line.substring(line.indexOf(':')+1, line.indexOf(",")));
+            }
+        }
+        while(s.hasNextLine()){
+
+            String line = s.nextLine();
+            if(clouds.length().equals(>0)){
+                clouds = clouds(line.substring(line.indexOf(':')+1,line.indexOf(",")));
+
+
+            }
+        }
 
 
 
@@ -92,4 +116,6 @@ public class Zipcode implements Comparable<Zipcode>, Distance, WeatherInfo {
         return ob;
     }
 
-}
+
+    }
+
