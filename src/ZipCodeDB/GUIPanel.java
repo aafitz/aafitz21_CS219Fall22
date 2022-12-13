@@ -39,6 +39,12 @@ public class GUIPanel extends JPanel {
             WeatherObservation wob = zc.getWeatherData();
             output.setText(wob.toString());
             System.out.println(wob);
+
+            String code2 = zipcode.getText();
+            Zipcode code = db.search(code);
+            WeatherObservation max_latitiude = code.getWeatherData();
+            out.setText(max_latitude.toString());
+            System.out.println(code);
         }
     }
 

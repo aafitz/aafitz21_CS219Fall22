@@ -109,7 +109,8 @@ public class Zipcode implements Comparable<Zipcode>, Distance, WeatherInfo {
             }
         }
 
-
+// enter in-- collect data that is needed for the weatherobservation class
+        //-- needs humidity, clouds, temp , speed
 
         WeatherObservation ob =
                 new WeatherObservation(humidity, speed, temp, clouds);
