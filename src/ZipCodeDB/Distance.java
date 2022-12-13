@@ -1,8 +1,7 @@
-//package ZipCodeDB;
-//
-//public interface Distance {
-//    //compute the distance between the current zipcode (this) and zip
-//    double distance(Zipcode zip);
-//
-//
-//}
+package ZipCodeDB;
+
+public interface Distance {
+
+    // Compute the distance between the current Zipcode and zip
+    double distance(Zipcode zip);
+}
